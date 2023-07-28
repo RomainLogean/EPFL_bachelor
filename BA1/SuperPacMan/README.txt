@@ -47,5 +47,5 @@ Après avoir survécu à son périple dans les mines, Pacman est sain et sauf.
 A moins que son destin ait été plus tragique ...
 
 
-![SuperPacMan](https://github.com/RomainLogean/EPFL_bachelor/blob/main/BA1/SuperPacMan/screen.png)
+https://github.com/RomainLogean/EPFL_bachelor/blob/main/BA1/SuperPacMan/screen.png
 
