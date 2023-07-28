@@ -1,0 +1,75 @@
+A. Contenu
+	
+	1. Modifications apportées au code
+
+		1.A. Changement classe Behavior
+		1.B. Vie supplémentaire chaque 5000 points
+		1.C. Cheat Code
+
+	2. Extensions, classes et interfaces ajoutées
+
+		2.A. Effets sonores
+		2.B. Nouvelles arènes
+		2.C. Fantômes inoffensifs ajoutés
+		2.D. Mur invisible
+		2.E. Mode Pause
+		2.F. Game Over
+
+
+B. Contenu détaillé
+
+	1. Modifications apportées au code
+	
+		1.A. La classe Behavior a été modifiée. Elle traîte différemment les nouvelles arènes Temple et RouteTemple (cf.2.D)
+	
+		1.B. Lorsque Pacman collecte 5000 points, il récolte une vie supplémentaire et donc l'effet 
+		audio qui y est rattaché (cf.2.A.Audio 6)
+	
+		1.C. Cheat Code : Maintenir la touche "Space" est un code de "triche" permettant de voir 
+		la trajectoire des fantômes intelligents et aider les joueurs les moins aguerris.
+	
+	2. Extensions, classes et interfaces ajoutées
+	
+		2.A. Différents effets audios ont été ajoutés dans le programme de base ainsi que dans la partie finale du projet : 
+	
+			- Audio 1 ajouté: Récupérer un diamant lance un effet sonore : transactionFail
+	
+			- Audio 2 ajouté: Récupérer une cerise et une clef lance un effet sonore : transactionOk
+	
+			- Audio 3 ajouté: Récupérer un Bonus lance un effet sonore : fight (afin d'imiter le combat entre Pacman et les fantômes)
+	
+			- Audio 4 ajouté: Lorsque Pacman perd une vie, il lance un effet sonore (ajouté par nos soins) : oof
+	
+			- Audio 5 ajouté: Lorsque Pacman mange un fantôme (affaibli), il lance un effet sonore (ajouté par nos soins) : eat
+	
+			- Audio 6 ajouté: Lorsque Pacman gagne un PV (cf.1.B) , il lance un effet sonore : recovery
+		
+			- Audio 7 ajouté: Lorsque Clyde nous parle (cf.2.C), il lance l'effet sonore : dialogueNext
+	
+			- Audio 8 ajouté: Lorsque Pacman perd toutes ses vies, il lance l'effet sonore (ajouté par nos soins) : gameOver
+	
+		2.B. - ch.epfl.cs107.play.game.superpacman.area.
+		
+			Deux nouvelle arènes ont été ajoutées à la fin du jeu : Temple et RouteTemple, tirés du package Zelda. 
+			Pacman peut alors se téléporter de Temple à RouteTemple et inversement, ce qui mime l'entrée et la sortie de la maison.
+	
+		2.C. - ch.epfl.cs107.play.game.superpacman.actor.
+		
+			Nouveau fantôme ajouté : Clyde ne fait pas de dégâts au joueur, son constructeur lui permet de dire un court 
+			texte et d'effectuer un bruit (effet audio) quand le joueur s'approche de son champ de vision.
+			Et Clyde suit le joueur des yeux lorsqu'il est dans son champs de vision. Un fantôme Clyde a été placé
+			sur l'arène Temple et 2 Clydes sur l'arène RouteTemple.
+	
+		2.D - ch.epfl.cs107.play.game.superpacman.actor.
+		
+			Nouvel acteur invisible ajouté, il sert de mur dans les deux dernières arènes qui sont hors 
+			du jeu (Temple et RouteTemple). Ces murs sont initialisés à l'aide de SuperPacmanBehavior (cf.1.A).
+	
+		2.E. - ch.epfl.cs107.play.game.superpacman.actor.
+		
+			Un mode pause est disponible lorsque le joueur appuie sur la touche "Enter".
+	
+		2.F. - ch.epfl.cs107.play.game.superpacman.actor.
+		
+			Si Pacman perd toutes ses vies, alors un écran de fin affiche le score, un message d'encouragement aléatoire ainsi 
+			que Game Over (et une douce musique... des regrets...).
