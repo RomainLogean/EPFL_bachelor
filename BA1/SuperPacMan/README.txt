@@ -45,3 +45,7 @@ Lorsque Pacman recupère 5000 points, il se soigne d'un pv (cf. ## Obtenir des p
 
 Après avoir survécu à son périple dans les mines, Pacman est sain et sauf.
 A moins que son destin ait été plus tragique ...
+
+
+https://github.com/RomainLogean/EPFL_bachelor/blob/main/BA1/SuperPacMan/screen.png
+
